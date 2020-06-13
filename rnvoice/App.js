@@ -2,6 +2,9 @@
 import React from 'react';
 import {StyleSheet, Text, View, Button, AppRegistry} from 'react-native';
 import Voice from 'react-native-voice';
+
+import Tts from 'react-native-tts';
+
 export default class VoiceNative extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +17,16 @@ export default class VoiceNative extends React.Component {
     Voice.onSpeechRecognized = this.onSpeechRecognized.bind(this);
     Voice.onSpeechEnd = this.onSpeechEndHandler.bind(this);
     Voice.onSpeechResults = this.onSpeechResults.bind(this);
+
+    //Tts.voices().then(voices => console.log(voices));
+
+    // Samantha
+    // Karen
+
+    Tts.speak('Hello, world! I am Farmy, I hope I can help you.', {
+      iosVoiceId: 'com.apple.ttsbundle.Samantha-compact',
+      rate: 0.45,
+    });
   }
   componentWillUnmount() {
     console.log('Mounted');

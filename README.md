@@ -13,4 +13,6 @@ https://www.npmjs.com/package/@react-native-community/voice
 https://www.npmjs.com/package/react-native-voice
 
 
+https://github.com/ak1394/react-native-tts
+
 
